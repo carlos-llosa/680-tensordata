@@ -1,0 +1,59 @@
+\frametitle{Special Cases when $p<2$}
+
+
+\begin{columns}
+\begin{column}{4.5cm}
+
+\begin{block}{}
+\begin{center}
+\underline{Formula}
+\end{center}
+\begin{center}
+$\mathbf{\underline{Y}}_i =  \langle  \mathbf{\underline{X}}_i|  \mathbf{\underline{B}} \rangle + \mathbf{\underline{E}}_i$
+\end{center}
+\begin{center}
+$\mathbf{\underline{Y}}_i \in \mathbb{R}^{m_1\times\hdots\times m_p}$
+\end{center}
+\begin{center}
+$\mathbf{\underline{X}}_i \in \mathbb{R}^{h_1\times\hdots\times h_l}$
+\end{center}
+\end{block}
+\vspace{0.5cm}
+
+\begin{block}{}
+
+\begin{small}
+\hspace*{0.5cm}\underline{Least squares solution}\vspace*{0.2cm}
+\end{small}\vspace*{0.1cm}
+\begin{small}
+$
+\widehat{\mathbf{B}}_{<l>}
+=
+\hspace*{0.25cm}
+\Big(\sum\limits_{i=1}^n (\vecc \mathbf{\underline{X}}_i) (\vecc \mathbf{\underline{X}}_i)' \Big)^{-1}$\\\hspace*{1cm}$\Big(\sum\limits_{i=1}^n (\vecc \mathbf{\underline{X}}_i) (\vecc \mathbf{\underline{Y}}_i)' \Big)
+$
+\end{small}
+
+\end{block}
+
+
+\end{column}
+\begin{column}{5.5cm}
+Cases where $\widehat{\mathbf{B}}_{LS}=\widehat{\mathbf{B}}_{MLE}$
+\begin{center}
+\scriptsize
+\begin{tabular}{ l | c }
+\begin{tabular}{@{}c@{}}Regression\\ Method $(l,p)$ \end{tabular} & $\widehat{\mathbf{B}}_{MLE}$
+\\
+\hline
+\begin{tabular}{@{}c@{}}\\Simple Linear \\ $(0,0)$ \end{tabular} & $(\sum\limits_{i=1}^n x_ix_i)^{-1}(\sum\limits_{i=1}^n x_iy_i)$
+\\
+\begin{tabular}{@{}c@{}}\\Multiple Linear \\ $(1,0)$ \end{tabular} & $(\sum\limits_{i=1}^n \bm{x}_i\bm{x}_i')^{-1}(\sum\limits_{i=1}^n \bm{x}_iy_i)$
+\\
+\begin{tabular}{@{}c@{}}\\Multivariate ML \\ $(1,1)$ \end{tabular} & $(\sum\limits_{i=1}^n \bm{x}_i\bm{x}_i')^{-1}(\sum\limits_{i=1}^n \bm{x}_i\bm{y}_i')$
+\\
+\begin{tabular}{@{}c@{}}\\Tensor $(l,0)$ \\ $\vecc(\widehat{\mathbf{B}}_{MLE})$ \end{tabular} & \begin{tabular}{@{}c@{}}\\ $\Big(\sum\limits_{i=1}^n (\vecc \mathbf{\underline{X}}_i) (\vecc \mathbf{\underline{X}}_i)' \Big)^{-1}$\\ \hspace*{1cm}$ (\sum_{i=1}^n (\vecc \mathbf{\underline{X}}_i)y_i)$\end{tabular}
+\end{tabular}
+\end{center}
+\end{column}
+\end{columns}
